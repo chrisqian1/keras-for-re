@@ -3,7 +3,7 @@ from keras.callbacks import ModelCheckpoint
 from argparse import ArgumentParser
 import random
 from ie_model import *
-from nerdoc import *
+from re import *
 
 random.seed(1234)
 max_seq_len = 128
