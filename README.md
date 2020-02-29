@@ -1,12 +1,12 @@
 # keras-for-re:relation extraction using keras
 
 ### Introduction
-This repository is for semantic relation classification task using various models based on keras. It reads relation mention information from instance-level file, like semeval-2010 task 8. The project prepares the input for various models, train and test on data using these models supported in keras. Models available now are Lstm, Attention Lstm, Piecewise Cnn, Bert and XLnet. Other models will be added in the future.
+This repository is for semantic relation classification task using various models based on keras[9]. It reads relation mention information from instance-level file, like semeval-2010 task 8[1]. The project prepares the input for various models, train and test on data using these models supported in keras. Models available now are Lstm, Attention Lstm, Piecewise Cnn, Bert and XLnet. Other models will be added in the future.
 
 ### Model setting
-For Lstm, Att_Lstm and PCnn model, the main feature is pre-trained word vectors (Glove or Word2Vec). For Lstm and Att_Lstm, additional features include POS and character sequence and etc. For PCnn, additional features include entity positions and etc.
+For Lstm[2], Att_Lstm[3] and PCnn[4] model, the main feature is pre-trained word vectors (Glove[5] or Word2Vec[6]). For Lstm and Att_Lstm, additional features include POS and character sequence and etc. For PCnn, additional features include entity positions and etc.
 
-For Bert and XLnet, BERT/XLnet tokenizer is used to tokenize a sentence into word pieces. Bert/XLnet pre-trained model is loaded as initial model.
+For Bert[7] and XLnet[8], BERT/XLnet tokenizer is used to tokenize a sentence into word pieces. Bert/XLnet pre-trained model is loaded as initial model.
 
 When training, the best model on the validation set will be saved as the final model. Category accuracy will be used to choose the best model by evaluating on the validation set.
 
@@ -40,16 +40,21 @@ experiment: No. of experiment
 
 ### Reference
 
+
 [1] Hendrickx, S.N. Kim, Z. Kozareva, P. Nakov,D.´O S´eaghdha, S. Pad´o, M. Pennacchiotti, L. Ro-mano, and S. Szpakowicz. 2010. Semeval-2010 task8: Multi-way classiﬁcation of semantic relations be-tween pairs of nominals. In Proceedings of the 5thInternational Workshop on Semantic Evaluation.
 
-[2] Bryan Rink and Sanda Harabagiu. 2010. Utd: Classifying semantic relations by combining lexical and semantic resources. In Proceedings of the 5th International Workshop on Semantic Evaluation, pages 256–259. Association for Computational Linguistics.
+[2] Shu Zhang, Dequan Zheng, Xinchen Hu, and Ming Yang. 2015. Bidirectional long short-term memory networks for relation classification.
 
-[3] Daojian Zeng, Kang Liu, Siwei Lai, Guangyou Zhou, and Jun Zhao. 2014. Relation classification via convolutional deep neural network. In Proceedings of COLING, pages 2335–2344.
+[3] Peng Zhou, Wei Shi, Jun Tian, Zhenyu Qi, Bingchen Li, Hongwei Hao, and Bo Xu. 2016. Attention-based bidirectional long short-term memory networks for relation classification. In The 54th Annual Meeting of the Association for Computational Linguistics, page 207.
 
-[4] Dongxu Zhang and Dong Wang. 2015. Relation classification via recurrent neural network. arXiv preprint arXiv:1508.01006.
+[4] Daojian Zeng, Kang Liu, Siwei Lai, Guangyou Zhou, and Jun Zhao. 2014. Relation classification via convolutional deep neural network. In Proceedings of COLING, pages 2335–2344.
 
-[5] Peng Zhou, Wei Shi, Jun Tian, Zhenyu Qi, Bingchen Li, Hongwei Hao, and Bo Xu. 2016. Attention-based bidirectional long short-term memory networks for relation classification. In The 54th Annual Meeting of the Association for Computational Linguistics, page 207.
+[5] Jeffrey Pennington, Richard Socher, and Christopher D. Manning. 2014. Glove: Global vectors for word representation. In Empirical Methods in Natural Language Processing (EMNLP), pages 1532–1543.
 
-[6] Shanchan Wu and Yifan He. 2019. Enriching pretrained language model with entity information for relation classification. CoRR, abs/1905.08284.
+[6] Noah A Smith. Contextual word representations: A contextual introduction. arXiv preprint arXiv:1902.06006, 2019.
 
-[7] Python packages used: keras: https://github.com/keras-team/keras; keras-bert: https://github.com/CyberZHG/keras-bert; keras-xlnet: https://github.com/CyberZHG/keras-xlnet; keras-xlnet: https://github.com/CyberZHG/keras-xlnet; keras-contrib: https://github.com/keras-team/keras-contrib
+[7] Shanchan Wu and Yifan He. 2019. Enriching pretrained language model with entity information for relation classification. CoRR, abs/1905.08284.
+
+[8] shish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Lukasz Kaiser, and Illia Polosukhin. 2017. Attention is all you need. In Advances in Neural Information Processing Systems, pages 6000–6010.
+
+[9]Python packages used: keras: https://github.com/keras-team/keras; keras-bert: https://github.com/CyberZHG/keras-bert; keras-xlnet: https://github.com/CyberZHG/keras-xlnet; keras-xlnet: https://github.com/CyberZHG/keras-xlnet; keras-contrib: https://github.com/keras-team/keras-contrib
