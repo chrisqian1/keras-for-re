@@ -29,7 +29,7 @@ times: total times of training, default 5
 
 experiment: No. of experiment
 
-### Experimental results on the NCBI disease corpus
+### Experimental results on the semeval2010 disease corpus
 | Model    | Precision | Recall | F1    |
 | -------- | --------- | ------ | ----- |
 | Lstm     | 78.20     | 79.31  | 78.54 |
